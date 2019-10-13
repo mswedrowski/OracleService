@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6103cd8e-f846-4e55-986e-e3c946506e04" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/OracleService.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/OracleService.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oracle/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/oracle/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oracle/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/oracle/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,6 +58,8 @@
       <workItem from="1569444386459" duration="2614000" />
       <workItem from="1569768829181" duration="1342000" />
       <workItem from="1569862220900" duration="23902000" />
+      <workItem from="1570704942680" duration="10811000" />
+      <workItem from="1571005345175" duration="1106000" />
     </task>
     <servers />
   </component>
