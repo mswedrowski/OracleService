@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -87,18 +88,17 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     },
-    'mssql': {
-        'ENGINE': 'sql_server.pyodbc',
-        'NAME': 'OlistDataWarehouse',
-        'HOST': 'DESKTOP-NOM83A2',
-        'USER': 'swedr',
-        'PASSWORD': 'Mihol9roy',
 
-        'OPTIONS': {
-            'driver': 'ODBC Driver 13 for SQL Server',
-        }
+    'mysql': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'oracle',
+        'USER': 'root',
+        'PASSWORD': 'root',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
     }
 }
+
 
 
 # Password validation

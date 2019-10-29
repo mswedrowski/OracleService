@@ -3,8 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="6103cd8e-f846-4e55-986e-e3c946506e04" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oracle/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/oracle/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oracle/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/oracle/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,6 +65,9 @@
       <workItem from="1569862220900" duration="23902000" />
       <workItem from="1570704942680" duration="10811000" />
       <workItem from="1571005345175" duration="1106000" />
+      <workItem from="1571600673365" duration="3997000" />
+      <workItem from="1571864834028" duration="2091000" />
+      <workItem from="1572096336621" duration="9962000" />
     </task>
     <servers />
   </component>

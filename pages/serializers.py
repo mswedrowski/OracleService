@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from pages.models import Lead
-from pages.models import MobileUser
+from pages.models import MobileUser, ItemPurchase, OrderAmount
 from django.contrib.auth.hashers import make_password
 
 
@@ -17,3 +17,15 @@ class MobileUserSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
     validate_password = make_password
+
+
+class ItemPurchaseSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ItemPurchase
+        fields = '__all__'
+
+
+class OrderAmountSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = OrderAmount
+        fields = '__all__'

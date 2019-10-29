@@ -42,6 +42,3 @@ class UserAPI(generics.RetrieveAPIView):
     def get_object(self):
         return self.request.user
 
-from tbats import TBATS, BATS
-model = estimator.fit(order_purchase_train)
-print('Beta: ',model.params.beta)
