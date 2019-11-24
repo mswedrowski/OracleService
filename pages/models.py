@@ -6,6 +6,14 @@
 #   * Remove `managed = False` lines if you wish to allow Django to create, modify, and delete the table
 # Feel free to rename the models, but don't rename db_table values or field names.
 from django.db import models
+# This is an auto-generated Django model module.
+# You'll have to do the following manually to clean this up:
+#   * Rearrange models' order
+#   * Make sure each model has one field with primary_key=True
+#   * Make sure each ForeignKey has `on_delete` set to the desired behavior.
+#   * Remove `managed = False` lines if you wish to allow Django to create, modify, and delete the table
+# Feel free to rename the models, but don't rename db_table values or field names.
+from django.db import models
 
 
 # Create your models here.
@@ -16,6 +24,8 @@ class Lead(models.Model):
     message = models.CharField(max_length=500, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
+
+# SQL-LITE -------------------------------------------------------------------
 
 class MobileUser(models.Model):
     email = models.EmailField(max_length=100, unique=True)
@@ -34,7 +44,29 @@ class OrderAmount(models.Model):
     value = models.FloatField(default=0)
 
 
+class HistoryPurchase(models.Model):
+    itemName = models.CharField(max_length=100)
+    date = models.FloatField(max_length=20)
+    value = models.FloatField(default=0)
 
+
+class TodayData(models.Model):
+    date = models.FloatField(max_length=20)
+    amountValue = models.FloatField(default=0)
+    revenueValue = models.FloatField(default=0)
+
+
+class TodayOrderDistribution(models.Model):
+    itemName = models.CharField(max_length=100)
+    distribution = models.FloatField(max_length=20)
+
+
+class PredictionOrder(models.Model):
+    date = models.FloatField(max_length=20)
+    value = models.FloatField(default=0)
+
+
+# MYSQL -------------------------------------------------------------------
 class CustomerCity(models.Model):
     customer_id = models.TextField(blank=True, null=True)
     customer_unique_id = models.TextField(blank=True, null=True)
@@ -48,7 +80,7 @@ class CustomerCity(models.Model):
 
 
 class FactOrders(models.Model):
-    order_id = models.TextField(blank=True,primary_key=True)
+    order_id = models.TextField(blank=True, primary_key=True)
     customer_id = models.TextField(blank=True, null=True)
     order_status = models.TextField(blank=True, null=True)
     order_purchase_timestamp = models.TextField(blank=True, null=True)
@@ -78,7 +110,6 @@ class GeolocationCity(models.Model):
     class Meta:
         managed = False
         db_table = 'geolocation_city'
-
 
 
 class OrderItems(models.Model):
@@ -122,7 +153,7 @@ class OrderReviews(models.Model):
 
 
 class Products(models.Model):
-    product_id = models.TextField(blank=True, null=True)
+    product_id = models.TextField(blank=True, primary_key=True)
     product_category_name = models.TextField(blank=True, null=True)
     product_name_lenght = models.FloatField(blank=True, null=True)
     product_description_lenght = models.FloatField(blank=True, null=True)

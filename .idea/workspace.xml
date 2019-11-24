@@ -2,20 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6103cd8e-f846-4e55-986e-e3c946506e04" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oracle/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/oracle/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -28,13 +49,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="D:\PracaInzynierska\WebService\OracleService\.idea" />
+      </set>
+    </option>
+  </component>
   <component name="ProjectId" id="1QFiTzGy16b8kiIjer2Uieqnyrj" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.templateLanguages.PyTemplateLanguageModulesConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.django.DjangoModulesConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -67,7 +96,10 @@
       <workItem from="1571005345175" duration="1106000" />
       <workItem from="1571600673365" duration="3997000" />
       <workItem from="1571864834028" duration="2091000" />
-      <workItem from="1572096336621" duration="9962000" />
+      <workItem from="1572096336621" duration="34188000" />
+      <workItem from="1573084429566" duration="3261000" />
+      <workItem from="1573162156016" duration="11340000" />
+      <workItem from="1574009175963" duration="6853000" />
     </task>
     <servers />
   </component>
