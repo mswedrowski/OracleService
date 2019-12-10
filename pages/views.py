@@ -1,11 +1,15 @@
 import datetime
-
+from django.contrib.auth.models import User
 from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 import json
+
+from django.views.decorators.csrf import csrf_exempt
+
 from pages.models import FactOrders, PredictionOrder
 from django.contrib.auth.hashers import make_password, check_password
 from . import views
+from .tasks import sleepy
 import time
 
 # Create your views here.
@@ -18,8 +22,24 @@ from pages.serializers import MobileUserSerializer
 def index(request):
     return render(request, 'pages/index.html')
 
+@csrf_exempt
+def login(request):
+    req_json = json.loads(request.body)
+    req_username = req_json['username']
+    req_password = req_json['password']
+
+    users = MobileUser.objects.all()
+    isOk = False
+    for user in users:
+        if(user.email==req_username and user.password==req_password):
+            isOk = True
+    if(isOk):
+        return JsonResponse({'user': {'id': 5,'username':'test'},'token': '31111111111a'},status=200)
+    else:
+        return JsonResponse({'user': {'id': 5, 'username': 'wrong'}, 'token': '31111111111a'}, status=403)
 
 def about(request):
+    sleepy(10)
     return render(request, 'pages/about.html')
 
 

@@ -5,6 +5,8 @@ from django.urls import path
 from pages.models import FactOrders, OrderAmount, Products, HistoryPurchase, TodayOrderDistribution,\
     TodayData,PredictionOrder
 import time
+import pandas as pd
+from tbats import TBATS
 import datetime
 import threading
 
@@ -27,6 +29,7 @@ urlpatterns += [
     path('about', views.about, name='about'),
     path('validate_user', views.validate_user, name='validate_user'),
     path('api/today_data', views.today_data, name='api/today_data'),
+    path('api/login',views.login,name='api/login')
    # path('api/prediction_order', views.predict_orders, name='api/prediction_order')
 ]
 
@@ -102,18 +105,30 @@ def run():
 
 def predict_orders():
     PredictionOrder.objects.all().delete()
-    today = '2017-03-03'
-    next_day = '2017-03-04'
-    next_day_2 = '2017-03-05'
-    next_day_3 = '2017-03-06'
-    list_of_dates = (next_day, next_day_2, next_day_3)
+    orders  = OrderAmount.objects.all()
 
-    val = 55
+    dates = []
+    vals = []
+    for order in orders:
+        dates.append(datetime.datetime.utcfromtimestamp(int(order.date)).strftime('%Y-%m-%d %H:%M:%S'))
+        vals.append(order.value)
 
-    for date in list_of_dates:
-        timestamp = time.mktime(datetime.datetime.strptime(date, "%Y-%m-%d").timetuple())
+    order_purchase = pd.DataFrame()
+    order_purchase['Datetime'] = dates
+    order_purchase['order_count'] = vals
+    order_purchase.set_index(pd.DatetimeIndex(order_purchase['Datetime']))
+    estimator_trend = TBATS(seasonal_periods=(7,), use_trend=True)
+    model_trend = estimator_trend.fit(order_purchase['order_count'])
+    y_forecast_trend = model_trend.forecast(steps=30)
+    print(y_forecast_trend)
+
+    date = datetime.datetime.now()
+
+
+    for val in y_forecast_trend:
+        timestamp = time.mktime(datetime.datetime.strptime( str(date.year)+"-" +str(date.month)+"-" + str(date.day), "%Y-%m-%d").timetuple())
         PredictionOrder(date=timestamp, value=val).save()
-        val += 1
+        date += datetime.timedelta(days=1)
 
 predict_orders()
 
@@ -129,6 +144,7 @@ def clear_all():
 
 
 print("START!")
-run()
-predict_orders()
+#run()
+#predict_orders()
+#clear_all()
 print('sth')

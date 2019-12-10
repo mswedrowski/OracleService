@@ -17,7 +17,7 @@ class MobileUserSerializer(serializers.ModelSerializer):
         model = MobileUser
         fields = '__all__'
 
-    validate_password = make_password
+   # validate_password = make_password
 
 
 class ItemPurchaseSerializer(serializers.ModelSerializer):
